@@ -12,7 +12,9 @@ const Infinitescroll = () => {
     useEffect(() => {
         if (scrollcheck ) {
             setpage(page + 1);
+            setscrollcheck(false)
         }
+       
     }, [scrollcheck]);
 
     useEffect(() => {
@@ -25,14 +27,16 @@ const Infinitescroll = () => {
             try {
                 const response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=a79a50cc9c617bb7abb717d180c0e357&language=en-US&page=${page}`);
                 const json = await response.json();
-                setdata(prevdata => [ ...prevdata, ...json.results]);
+                setdata(prevdata => [ ...prevdata ,  ...json.results]);
+                console.log(data)
+                
             } catch (error) {
                 console.log(error);
             }
         };
-          if(scrollcheck ||  page === 1){
+         
         fetch_data();
-          }
+          
     }, [page ]);
 
     return (
