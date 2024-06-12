@@ -1,36 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 export const Todo = () => {
 
-  const [usertext , setUsertext] = useState('')
-  const [todolist , settodolist] = useState([])
-  
+  const [usermsg , setusermsg] = useState('')
+  const [taskarr, settaskarr ] = useState([])
+  console.log(taskarr)
+
+
+const randomid = () =>{
+  const a = Math.floor(Math.random() * 10000 )
+  return a 
+}
+
+
+
   const handleclick = () =>{
-    settodolist(prevdata => [...prevdata , usertext])
-    setUsertext('')
-   
-  }
+
+    const obj = {
+      id: randomid(),
+      msg : usermsg,
+      completed : false
 
 
-  const handledel = (index) =>{
-    const filterarr = todolist.filter((_, a) =>a !== index ) 
-    settodolist(filterarr)
+    }
+    settaskarr(data => [...data , obj])
+    setusermsg('')
   }
+
+  const completedtask = (id1) =>{
+
+    const a = taskarr.map((i) => {
+   if(i.id == id1) {
+    return {...i , completed : !i.completed}
+   } 
+  }
+  
+  )
+  
+  
+  settaskarr(a)
+  } 
+  
 
   return (
     <div>
-      <input type='text'  onChange={(e) =>setUsertext(e.target.value)} value={usertext}/>
+      <input type='text' onChange={(e) =>setusermsg(e.target.value)} value={usermsg}  /> 
       <button onClick={handleclick}>add task</button>
 
-      {
-        todolist.map((i, index)=>(
-          <div key={index}>
-          <li >{i}</li>
-          <button onClick={()=>handledel(index)}>delete</button>
-          </div>
-        ))
-      }
-      
+      <div>
+        {
+          taskarr.map((i) =>(
+         
+            <div key={i.id }> 
+            <input type='checkbox' onClick={()=>completedtask(i.id)} />
+            <p style={i.completed ?  {textDecoration : "line-through"   } : {textDecoration : "none"}}>{i.msg}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   )
 }
