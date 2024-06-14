@@ -4,6 +4,7 @@ import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import { Todo } from './components/Todo';
 import { Fetchdata } from './components/Fetchdata';
 import { Weather } from './components/Weather';
+import { Pagination } from './components/Pagination';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/todo' element={<Todo />} />
           <Route path='/fetchdata' element={<Fetchdata />} />
           <Route path='/weather' element={<Weather />}  />
+          <Route path='/page' element={<Pagination />}  />
         </Routes>
       </Router>
        
