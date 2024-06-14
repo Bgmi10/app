@@ -5,10 +5,11 @@ import { Todo } from './components/Todo';
 import { Fetchdata } from './components/Fetchdata';
 import { Weather } from './components/Weather';
 import { Pagination } from './components/Pagination';
+import { Formvalidation } from './components/Formvalidation';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Router>
         <Routes>
           <Route path='/infintescroll' element={<Infinitescroll />} />
@@ -16,7 +17,8 @@ function App() {
           <Route path='/fetchdata' element={<Fetchdata />} />
           <Route path='/weather' element={<Weather />}  />
           <Route path='/page' element={<Pagination />}  />
-        </Routes>
+          <Route path='/form' element={<Formvalidation />}  /> 
+         </Routes>
       </Router>
        
     </div>
