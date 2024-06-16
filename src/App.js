@@ -6,6 +6,7 @@ import { Fetchdata } from './components/Fetchdata';
 import { Weather } from './components/Weather';
 import { Pagination } from './components/Pagination';
 import { Formvalidation } from './components/Formvalidation';
+import { Useinfintescroll } from './hooks/Useinfintescroll';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/weather' element={<Weather />}  />
           <Route path='/page' element={<Pagination />}  />
           <Route path='/form' element={<Formvalidation />}  /> 
+          <Route path='/socialmedia' element={<Useinfintescroll/>} />
          </Routes>
       </Router>
        
