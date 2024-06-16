@@ -7,6 +7,7 @@ import { Weather } from './components/Weather';
 import { Pagination } from './components/Pagination';
 import { Formvalidation } from './components/Formvalidation';
 import { Useinfintescroll } from './hooks/Useinfintescroll';
+import { Chat } from './components/Chat';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/page' element={<Pagination />}  />
           <Route path='/form' element={<Formvalidation />}  /> 
           <Route path='/socialmedia' element={<Useinfintescroll/>} />
+          <Route path='/chat' element={<Chat />}  />
          </Routes>
       </Router>
        
