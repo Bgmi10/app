@@ -1,40 +1,55 @@
-import React, { useEffect, useState } from 'react'
-import io, { Socket } from 'socket.io-client'
+// src/App.js
+import React, { useEffect, useState } from 'react';
+import io from 'socket.io-client';
 
+const socket = io('http://localhost:3001');
 
 export const Chat = () => {
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
 
-    const [text , settext] = useState('')
+  useEffect(() => {
+    socket.on('connect', () => {
+      console.log('Connected to server');
+    });
 
-    
-    
-    const socket = io('http://localhost:3001/')
-    useEffect(() =>{
-    socket.on('connect' , () =>{
-        console.log('connexted ')
-    })
+    socket.on('receiveMessage', (message) => {
+      setMessages((prevMessages) => [...prevMessages, message]);
+    });
 
-    socket.on('disconnect' , () =>{
-        console.log('disconnected ffrom server')
-    })
+    socket.on('disconnect', () => {
+      console.log('Disconnected from server');
+    });
 
-  return () => {
+    return () => {
       socket.off('connect');
+      socket.off('receiveMessage');
       socket.off('disconnect');
     };
-    },[])
+  }, []);
 
-    const handleclick = () =>{
-        socket.emit('msg' , text)
-        settext('')
+  const sendMessage = () => {
+    if (message.trim()) {
+      socket.emit('sendMessage', message);
+      setMessage('');
     }
-  return (
-    <div>Chat
+  };
 
-        <div>
-            <input type='text' placeholder='type...' value={text} onChange={(e) => settext(e.target.value)} />
-            <button onClick={handleclick}>send</button>
-        </div>
+  return (
+    <div>
+      <h1>Socket.io with React</h1>
+      <div>
+        {messages.map((msg, index) => (
+          <div key={index}>{msg}</div>
+        ))}
+      </div>
+      <input
+        type="text"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button onClick={sendMessage}>Send</button>
     </div>
-  )
+  );
 }
+
