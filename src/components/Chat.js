@@ -7,7 +7,8 @@ const socket = io('http://localhost:3001');
 export const Chat = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-
+  console.log(messages)
+  
   useEffect(() => {
     socket.on('connect', () => {
       console.log('Connected to server');
@@ -15,6 +16,7 @@ export const Chat = () => {
 
     socket.on('receiveMessage', (message) => {
       setMessages((prevMessages) => [...prevMessages, message]);
+     
     });
 
     socket.on('disconnect', () => {

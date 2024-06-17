@@ -8,6 +8,7 @@ import { Pagination } from './components/Pagination';
 import { Formvalidation } from './components/Formvalidation';
 import { Useinfintescroll } from './hooks/Useinfintescroll';
 import { Chat } from './components/Chat';
+import { Userapi } from './components/Userapi';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/form' element={<Formvalidation />}  /> 
           <Route path='/socialmedia' element={<Useinfintescroll/>} />
           <Route path='/chat' element={<Chat />}  />
+          <Route path= '/user' element={<Userapi />} />
          </Routes>
       </Router>
        
