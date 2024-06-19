@@ -10,6 +10,8 @@ import { Useinfintescroll } from './hooks/Useinfintescroll';
 import { Chat } from './components/Chat';
 import { Userapi } from './components/Userapi';
 import { Createtodo } from './backend-todo/Createtodo';
+import { Dummyproduct } from './components/Dummyproduct';
+import { Dummydetailpage } from './components/Dummydetailpage';
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
           <Route path='/chat' element={<Chat />}  />
           <Route path= '/user' element={<Userapi />} />
           <Route path='/backendtodo' element= {<Createtodo />} />
-         </Routes>
+          <Route path='/dummyproduct' element={<Dummyproduct />} />
+          <Route path='/dummyproductdetail/:id' element={<Dummydetailpage />} />
+          </Routes>
       </Router>
        
     </div>
