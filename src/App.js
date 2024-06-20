@@ -12,6 +12,7 @@ import { Userapi } from './components/Userapi';
 import { Createtodo } from './backend-todo/Createtodo';
 import { Dummyproduct } from './components/Dummyproduct';
 import { Dummydetailpage } from './components/Dummydetailpage';
+import { Phoneotpinput } from './components/Phoneotpinput';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='/backendtodo' element= {<Createtodo />} />
           <Route path='/dummyproduct' element={<Dummyproduct />} />
           <Route path='/dummyproductdetail/:id' element={<Dummydetailpage />} />
+          <Route path='/phoneotp' element={<Phoneotpinput />} />
           </Routes>
       </Router>
        
