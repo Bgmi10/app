@@ -1,4 +1,4 @@
-    import React, { useRef, useState } from 'react'
+    import React, { useEffect, useRef } from 'react'
 
     export const Phoneotpinput = () => {
          const firstinput = useRef()
@@ -6,13 +6,19 @@
          const thirdinput=  useRef()
          const fourthinput = useRef()
          
-         const handlefirstinputchange  = (dynamicinput , path) =>{
-            
-            if((/^\D*\d\D*$/.test(dynamicinput.current.value))){
-            return  path.current.focus()
+         const handlefirstinputchange = (dynamicInput, nextInput) => {
+            if (/^\d$/.test(dynamicInput.current.value)) {
+              if (nextInput) {
+                nextInput.current.focus();
+              }
+            } else {
+              dynamicInput.current.value = ''; // Clear the invalid input
             }
-        
-        }
+          }
+
+          useEffect(() =>{
+            firstinput.current.focus()
+          },[])
 
     return (
         <div className='justify-center flex  p-10 '>

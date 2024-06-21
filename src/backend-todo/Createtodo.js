@@ -21,7 +21,8 @@ export const Createtodo = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            usermsg
+            usermsg,
+            todo_update_status : false
           })
         })
         console.log(req)

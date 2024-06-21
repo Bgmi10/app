@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Inputform } from './Inputform'
 
 export const Form = () => {
 
@@ -39,7 +40,7 @@ export const Form = () => {
         Email : <input type = "text"  placeholder='email' value={email} onChange={(e)=>setemail(e.target.value)}/>
         desc : <input type = "text"  placeholder='desc'  value ={desc} onChange={(e)=>setdesc(e.target.value)}/>
         <button onClick={handleclick}> submit feedback</button>
-        
+  
     </div>
   )
 }

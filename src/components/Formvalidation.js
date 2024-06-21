@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Validate } from '../utils/Validate'
+import { Inputform } from './Inputform'
 export const Formvalidation = () => {
 
 
@@ -39,13 +40,13 @@ export const Formvalidation = () => {
     <div className=' w-32 justify-center m-10 rounded-md py-10 '>
         <input type='text '  className='border-2 py-2 mb-10 rounded-md' placeholder='name'  onChange={(e) => setname(e.target.value)} value={name}/>
         
-        <input type='text '  className='border-2 py-2 mb-10 rounded-md'   placeholder='email' onChange={(e) => setemail(e.target.value)}  value={email}/>
+        <input type='number'  className='border-2 py-2 mb-10 rounded-md'   placeholder='email' onChange={(e) => setemail(e.target.value)}  value={email}/>
         <input type='password'  className='border-2 py-2 mb-10 rounded-md' placeholder='password' onChange={e => setpassword(e.target.value)} value={password}/>
       
         <button className=' bg-blue-500 rounded-md mb-4 p-2' onClick={submitform}>submit</button>
         <h1 className='text-red-500 animate-pulse'>{err}</h1>
         <h1 className='text-green-500 '>{success}</h1>
-       
+         <Inputform />
     </div> 
     
     </div>
