@@ -13,6 +13,7 @@ import { Createtodo } from './backend-todo/Createtodo';
 import { Dummyproduct } from './components/Dummyproduct';
 import { Dummydetailpage } from './components/Dummydetailpage';
 import { Phoneotpinput } from './components/Phoneotpinput';
+import { Colorswitcher } from './components/Colorswitcher';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/dummyproduct' element={<Dummyproduct />} />
           <Route path='/dummyproductdetail/:id' element={<Dummydetailpage />} />
           <Route path='/phoneotp' element={<Phoneotpinput />} />
+          <Route path='/colorswitcher' element={<Colorswitcher />} />
           </Routes>
       </Router>
        
