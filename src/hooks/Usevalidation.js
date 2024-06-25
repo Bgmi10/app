@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 
 const Usevalidation = (name , email ,phonenumber , password , confirmpassword , address) =>{
 
@@ -20,12 +19,12 @@ export default Usevalidation
 
 
 
-  //https://tamilvip.app/link/?74aqvw9oi07b
+      //https://tamilvip.app/link/?74aqvw9oi07b
       //https://tamilvip.app/link/?rx97me4n8143
       //https://tamilvip.app/link/?fwmvg858op19
       //https://tamilvip.app/link/?i84cvnz4a3u9
       //https://tamilvip.app/link/?k6m17uk4m9wd
-      // 18.50 sec 
+      // 18.50 sec
 
 
 

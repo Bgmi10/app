@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Pagintion_2 } from './Pagintion_2';
 
 export const Pagination = () => {
   const items = [
@@ -30,7 +31,7 @@ export const Pagination = () => {
   }
   return (
     <div>
-      {list.map((item, index) => (
+      {/* {list.map((item, index) => (
         <div key={index} className='flex justify-center'>
           <p>{item}</p>
         </div>
@@ -50,7 +51,8 @@ export const Pagination = () => {
           </button>
         ))}
         <button className='rounded-sm bg-green-400 p-1' onClick={handleNext} disabled={page === totalPages}>next</button>
-      </div>
+      </div> */}
+      <Pagintion_2 />
     </div>
   );
 };

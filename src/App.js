@@ -14,6 +14,8 @@ import { Dummyproduct } from './components/Dummyproduct';
 import { Dummydetailpage } from './components/Dummydetailpage';
 import { Phoneotpinput } from './components/Phoneotpinput';
 import { Colorswitcher } from './components/Colorswitcher';
+import { Accordion } from './components/Accordion';
+import { Bookstoresearch } from './components/Bookstoresearch';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path='/dummyproductdetail/:id' element={<Dummydetailpage />} />
           <Route path='/phoneotp' element={<Phoneotpinput />} />
           <Route path='/colorswitcher' element={<Colorswitcher />} />
+          <Route path='/accordion' element ={<Accordion />} />
+          <Route path='/searchbook' element={<Bookstoresearch />} />
           </Routes>
       </Router>
        
