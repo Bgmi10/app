@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Searchfilter_local_list } from './searchfilter_local_list'
 
 export const Bookstoresearch = () => {
 
@@ -34,6 +35,8 @@ export const Bookstoresearch = () => {
             ))
         }
        </div>}
+
+       <Searchfilter_local_list />
     </div>
   )
 }

@@ -38,6 +38,7 @@ function App() {
           <Route path='/colorswitcher' element={<Colorswitcher />} />
           <Route path='/accordion' element ={<Accordion />} />
           <Route path='/searchbook' element={<Bookstoresearch />} />
+          
           </Routes>
       </Router>
        
