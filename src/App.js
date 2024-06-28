@@ -16,6 +16,7 @@ import { Phoneotpinput } from './components/Phoneotpinput';
 import { Colorswitcher } from './components/Colorswitcher';
 import { Accordion } from './components/Accordion';
 import { Bookstoresearch } from './components/Bookstoresearch';
+import { Todolist_2 } from './components/Todolist_2';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='/colorswitcher' element={<Colorswitcher />} />
           <Route path='/accordion' element ={<Accordion />} />
           <Route path='/searchbook' element={<Bookstoresearch />} />
+          <Route path='/todo-2' element={<Todolist_2 />}/> 
           
           </Routes>
       </Router>

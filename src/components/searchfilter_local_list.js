@@ -29,6 +29,7 @@ export const Searchfilter_local_list = () => {
       
     } ,[userquery])
       
+    
 
 
   return (
@@ -38,7 +39,7 @@ export const Searchfilter_local_list = () => {
       </div>
        <div className='px-96 mt-4 '>
         {
-            filterdata.length === 0 ? <p>no search found !</p> : filterdata.map((i) =>(
+            filterdata.length === 0 ? <p>no search found !</p> : filterdata.map((i) =>( 
                 <p className=' shadow-md p-2'>{i.title}</p>
             ))
         }
