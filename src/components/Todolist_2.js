@@ -10,7 +10,7 @@ export const Todolist_2 = () => {
     const [filterd_list , setfilterd_list] = useState([]) 
     const [search_result , setsearch_result] = useState([])
     const [filter , setfilter] = useState('all')
-    console.log(filter)
+    
     
     const randomid = () =>{
         

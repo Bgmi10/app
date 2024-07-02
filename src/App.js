@@ -1,6 +1,6 @@
 import './App.css';
 import Infinitescroll from './components/Infintescroll';
-import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
+import {BrowserRouter as Router , Routes , Route, Outlet} from 'react-router-dom'
 import { Todo } from './components/Todo';
 import { Fetchdata } from './components/Fetchdata';
 import { Weather } from './components/Weather';
@@ -17,6 +17,10 @@ import { Colorswitcher } from './components/Colorswitcher';
 import { Accordion } from './components/Accordion';
 import { Bookstoresearch } from './components/Bookstoresearch';
 import { Todolist_2 } from './components/Todolist_2';
+import { Pagniation_2 } from './components/Pagniation_2';
+import { Dynamicfor } from './components/Dynamicfor';
+import { CommentContainer } from './components/CommentContainer';
+import { Protectedroutes } from './components/Protectedroutes';
 
 function App() {
   return (
@@ -40,7 +44,13 @@ function App() {
           <Route path='/accordion' element ={<Accordion />} />
           <Route path='/searchbook' element={<Bookstoresearch />} />
           <Route path='/todo-2' element={<Todolist_2 />}/> 
-          
+          <Route path='/pagination-2' element={<Pagniation_2 />}/> 
+          <Route element={<Protectedroutes children={<Outlet />} />} >
+          <Route path='/dynamic-form' element={<Dynamicfor /> } />
+          <Route path='/nested-comment' element ={<  CommentContainer />} />
+          </Route>
+         
+           
           </Routes>
       </Router>
        
