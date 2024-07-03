@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import reportWebVitals from './reportWebVitals';
+import store from './utils/Store';
+import {Provider} from 'react-redux'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,8 +25,9 @@ root.render(
       domain="dev-mmj882fndwuek5sn.us.auth0.com"
       clientId="eUzF60BiynXVtHCXpAqI1iLtJShbzvST"
       redirectUri={window.location.origin}>
-
+       <Provider store={store}>
       <App />
+      </Provider>
 
     </Auth0Provider>
 
