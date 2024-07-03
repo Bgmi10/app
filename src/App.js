@@ -21,6 +21,9 @@ import { Pagniation_2 } from './components/Pagniation_2';
 import { Dynamicfor } from './components/Dynamicfor';
 import { CommentContainer } from './components/CommentContainer';
 import { Protectedroutes } from './components/Protectedroutes';
+import { Editui } from './components/text _editor/Editui';
+import { Home } from './components/text _editor/Home';
+import { Protectedroutefortexteditor } from './components/text _editor/Protectedroutefortexteditor';
 
 function App() {
   return (
@@ -49,7 +52,12 @@ function App() {
           <Route path='/dynamic-form' element={<Dynamicfor /> } />
           <Route path='/nested-comment' element ={<  CommentContainer />} />
           </Route>
-         
+          <Route element={<Protectedroutefortexteditor childrenroute={<Outlet />}/>} >
+        
+        
+          </Route>
+          <Route path='/' element={<Editui />} />
+          <Route path='/home-editor' element={<Home />} />
            
           </Routes>
       </Router>
