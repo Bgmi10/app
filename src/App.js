@@ -26,6 +26,7 @@ import { Home } from './components/text _editor/Home';
 import { Protectedroutefortexteditor } from './components/text _editor/Protectedroutefortexteditor';
 import { BookUI } from './components/book _api/BookUI';
 import { Simpletodo } from './components/simpletodo/Simpletodo';
+import { Weather1 } from './components/Weather/Weather1';
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
           <Route path='/home-editor' element={<Home />} />
           <Route path='/book-api' element={<BookUI />} />
           <Route path='/simple-todo' element={<Simpletodo />} />
+          <Route path='/weather-1' element={<Weather1 />} />
            
           </Routes>
       </Router>
