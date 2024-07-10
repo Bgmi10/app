@@ -27,6 +27,9 @@ import { Protectedroutefortexteditor } from './components/text _editor/Protected
 import { BookUI } from './components/book _api/BookUI';
 import { Simpletodo } from './components/simpletodo/Simpletodo';
 import { Weather1 } from './components/Weather/Weather1';
+import { Tictac } from './components/Tic toa/Tictac';
+import { Traffic } from './components/Traffic';
+import { Mousetracker } from './components/Mousetracker';
 
 function App() {
   return (
@@ -64,6 +67,9 @@ function App() {
           <Route path='/book-api' element={<BookUI />} />
           <Route path='/simple-todo' element={<Simpletodo />} />
           <Route path='/weather-1' element={<Weather1 />} />
+          <Route path='/tic' element={<Tictac />} /> 
+          <Route path='/traffic' element={<Traffic />} />
+          <Route path='/trackmousemove' element={<Mousetracker />} />
            
           </Routes>
       </Router>
