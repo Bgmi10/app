@@ -30,6 +30,7 @@ import { Weather1 } from './components/Weather/Weather1';
 import { Tictac } from './components/Tic toa/Tictac';
 import { Traffic } from './components/Traffic';
 import { Mousetracker } from './components/Mousetracker';
+import { Accordian3 } from './components/Accordian/Accordian3';
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           <Route path='/tic' element={<Tictac />} /> 
           <Route path='/traffic' element={<Traffic />} />
           <Route path='/trackmousemove' element={<Mousetracker />} />
+          <Route path='/accordian3' element={<Accordian3 />} />
            
           </Routes>
       </Router>
