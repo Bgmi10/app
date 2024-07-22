@@ -33,6 +33,8 @@ import { Mousetracker } from './components/Mousetracker';
 import { Accordian3 } from './components/Accordian/Accordian3';
 import { Mainpage } from './components/Addtocart/Mainpage';
 import Searchbar22 from './components/SearchbarUI/Searchbar22';
+import { Nestui } from './components/Nestedcomments/Nestui';
+import { Infintescroll2 } from './components/Infintescroll/Infintescroll2';
 
 
 function App() {
@@ -77,6 +79,10 @@ function App() {
           <Route path='/accordian3' element={<Accordian3 />}  />
           <Route path = '/addtocart' element={<Mainpage />} />
           <Route path = '/searchbarui' element={< Searchbar22/>} />
+          <Route path = '/nestui' element={< Nestui/>} />
+          <Route path = '/scrollinfinte' element={< Infintescroll2/>} />
+          
+           
            
           </Routes>
       </Router>
