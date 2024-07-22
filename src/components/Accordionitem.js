@@ -1,4 +1,4 @@
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
@@ -17,9 +17,9 @@ export const Accordionitem = ({title , para , isopen  }) => {
            <p className='text-red-600'>{title}</p>
            <FontAwesomeIcon icon={toggle ? faAngleDown : faAngleUp} onClick={handleclick} className='cursor-pointer flex justify-end' />
        </div>
-          { toggle &&
+        
             <div>  
-           {isopen &&  <p className='font-light'>{para}</p>} </div>}
+           {isopen &&  <p className='font-light'>{para}</p>} </div>
             </div>
         
     </div>
