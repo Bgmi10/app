@@ -36,6 +36,7 @@ import Searchbar22 from './components/SearchbarUI/Searchbar22';
 import { Nestui } from './components/Nestedcomments/Nestui';
 import { Infintescroll2 } from './components/Infintescroll/Infintescroll2';
 import { Pagination_5 } from './components/Pagination-2/Pagination_5';
+import { Page } from './components/Page/Page';
 
 
 function App() {
@@ -83,6 +84,8 @@ function App() {
           <Route path = '/nestui' element={< Nestui/>} />
           <Route path = '/scrollinfinte' element={< Infintescroll2/>} />
           <Route path='/pagination-4' element={<Pagination_5 />} />
+
+          <Route path ='/page-2' element={<Page />} />
           
            
            
