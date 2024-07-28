@@ -37,6 +37,7 @@ import { Nestui } from './components/Nestedcomments/Nestui';
 import { Infintescroll2 } from './components/Infintescroll/Infintescroll2';
 import { Pagination_5 } from './components/Pagination-2/Pagination_5';
 import { Page } from './components/Page/Page';
+import { Themetoggler } from './components/Themetoggle/Themetoggler';
 
 
 function App() {
@@ -86,7 +87,7 @@ function App() {
           <Route path='/pagination-4' element={<Pagination_5 />} />
 
           <Route path ='/page-2' element={<Page />} />
-          
+          <Route path='/themetoggle' element={< Themetoggler />} /> 
            
            
           </Routes>
