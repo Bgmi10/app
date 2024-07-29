@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { ThemeToggle2 } from './ThemeToggle2'
 
 export const Themetoggler = () => {
 
@@ -15,12 +16,13 @@ export const Themetoggler = () => {
         setTheme(p => p === 'dark' ? 'light' : 'dark')
     }
 
-    localStorage.setItem('theme' , theme)
 
   return (
     <div className={theme === 'dark' ? 'bg-white text-black h-screen' : 'bg-black text-white'}>
 
         <button onClick={handleclick} className=''>Toggletheme</button>
+
+        <ThemeToggle2 />
     </div>
   )
 }
