@@ -39,6 +39,9 @@ import { Pagination_5 } from './components/Pagination-2/Pagination_5';
 import { Page } from './components/Page/Page';
 import { Themetoggler } from './components/Themetoggle/Themetoggler';
 import { Todo3 } from './components/Todo/Todo3';
+import { Blogpost } from './components/blog/Blogpost';
+import { Bloglist } from './components/blog/Bloglist';
+import { Addblog } from './components/blog/Addblog';
 
 
 function App() {
@@ -89,7 +92,9 @@ function App() {
           <Route path='/todo-3' element={<Todo3 />} />
           <Route path ='/page-2' element={<Page />} />
           <Route path='/themetoggle' element={< Themetoggler />} /> 
-           
+           <Route path='/blogpost/:id' element={<Blogpost />} />
+           <Route path='/bloglist' element={<Bloglist />} />
+           <Route path='/addblog' element={<Addblog />} />
            
           </Routes>
       </Router>
