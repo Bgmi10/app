@@ -42,6 +42,7 @@ import { Todo3 } from './components/Todo/Todo3';
 import { Blogpost } from './components/blog/Blogpost';
 import { Bloglist } from './components/blog/Bloglist';
 import { Addblog } from './components/blog/Addblog';
+import { Form } from './components/dynamicform/Form';
 
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
            <Route path='/blogpost/:id' element={<Blogpost />} />
            <Route path='/bloglist' element={<Bloglist />} />
            <Route path='/addblog' element={<Addblog />} />
+           <Route path='/d-form' element={<Form />} />
            
           </Routes>
       </Router>
