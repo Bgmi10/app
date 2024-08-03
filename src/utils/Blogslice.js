@@ -4,8 +4,8 @@ const Blogslice = createSlice({
     name : 'blogs',
     initialState : [],
     reducers : {
-        addblog : (state , action) => {
-            state = state.push(action.payload)
+        addblog : (state , action) => { 
+              state.push(action.payload)
         }
     }
 })

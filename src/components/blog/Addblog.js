@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { addblog } from '../../utils/Blogslice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 export const Addblog = () => {
@@ -12,18 +12,16 @@ export const Addblog = () => {
     const [err , setErr] = useState('')
     const [desc , setDesc] = useState('')
     const dispatch = useDispatch()
+    
+
     const blogData = {
-        id : Math.floor(Math.random() * 1000),
+        id : Math.floor(Math.random() * 1000),  
         blogtitle : title,
         username : name,
         blogimg : imgurl,
         blogdesc : desc
 
     }
-
-    useEffect(() => {
-          dispatch(addblog(blogData))
-    },[])
 
      
     const handlepostblog = () => {
@@ -44,17 +42,20 @@ export const Addblog = () => {
         }
         else{
             setList(prev =>  [...prev , blogData])
+             dispatch(addblog(blogData))
+             setName('')
+             setImgurl('')
+             setDesc('')
+             setTitle('')
+             setErr('Blog added successfully go to list page')
         }
+         
        
-        setName('')
-        setImgurl('')
-        setDesc('')
-        setTitle('')
     }
   return (
     <>
       <div>
-        <Link to={'/bloglist'}>go to list page</Link>
+        <Link to={`/bloglist`}>go to list page</Link>
         <div className='m-4 '>
         <span className='font-medium text-lg'>
             Blog title : 
